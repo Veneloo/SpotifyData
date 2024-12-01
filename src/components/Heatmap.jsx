@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
 import "../styles/Heatmap.css";
-import spotifyData from "../data/spotifyData.json"; // Your JSON file
-import { Tooltip } from "react-tooltip"; // Correct Tooltip import
+import spotifyData from "../data/spotifyData.json"; 
+import { Tooltip } from "react-tooltip";
 
 const Heatmap = () => {
   const [monthlyData, setMonthlyData] = useState([]);
@@ -51,7 +51,7 @@ const Heatmap = () => {
       return acc;
     }, {});
 
-    // Add an empty December (2024-12) if not present
+    // Add an empty December 
     if (!groupedByMonth["2024-12"]) {
       groupedByMonth["2024-12"] = [];
     }
